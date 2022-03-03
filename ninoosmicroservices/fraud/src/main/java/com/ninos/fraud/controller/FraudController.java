@@ -1,6 +1,6 @@
 package com.ninos.fraud.controller;
 
-import com.ninos.fraud.response.FraudCheckResponse;
+import com.ninos.clients.fraud.FraudCheckResponse;
 import com.ninos.fraud.service.FraudCheckService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

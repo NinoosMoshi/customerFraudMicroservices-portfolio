@@ -1,4 +1,4 @@
-package com.ninos.fraud.response;
+package com.ninos.clients.fraud;
 
 public record FraudCheckResponse(boolean isFraudster) {
 }
