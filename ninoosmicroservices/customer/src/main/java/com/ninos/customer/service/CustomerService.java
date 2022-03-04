@@ -41,7 +41,8 @@ public class CustomerService {
             throw new IllegalStateException("fraudster");
         }
 
-                notificationClient.sendNotification(
+        // todo: make it async. i.e add to queue
+        notificationClient.sendNotification(
                 new NotificationRequest(
                         customer.getId(),
                         customer.getEmail(),
