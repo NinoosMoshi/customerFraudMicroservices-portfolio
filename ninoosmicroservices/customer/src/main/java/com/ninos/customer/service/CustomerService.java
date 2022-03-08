@@ -30,11 +30,6 @@ public class CustomerService {
         customerRepo.saveAndFlush(customer);
 
         // todo: check if fraudster
-//        FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
-//                "http://FRAUD/api/v1/fraud-check/{customerId}",
-//                    FraudCheckResponse.class,
-//                    customer.getId());
-
         FraudCheckResponse fraudCheckResponse = fraudClient.isFraudster(customer.getId());
 
         if (fraudCheckResponse.isFraudster()){
